@@ -1,0 +1,7 @@
+Lexical analyzer error at line 1 : @
+Lexical analyzer error at line 2 : #
+Lexical analyzer error at line 3 : !
+Lexical analyzer error at line 4 : $
+Lexical analyzer error at line 5 : %
+Lexical analyzer error at line 6 : ^
+Lexical analyzer error at line 7 : &

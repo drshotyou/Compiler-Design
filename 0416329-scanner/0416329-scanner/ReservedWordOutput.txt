@@ -1,0 +1,16 @@
+  0-th token(type:1) on line 1 : program
+  1-th token(type:8) on line 2 : var
+  2-th token(type:10) on line 3 : array
+  3-th token(type:38) on line 4 : not
+  4-th token(type:15) on line 5 : of
+  5-th token(type:16) on line 6 : integer
+  6-th token(type:17) on line 7 : real
+  7-th token(type:18) on line 8 : function
+  8-th token(type:19) on line 9 : procedure
+  9-th token(type:20) on line 10 : begin
+ 10-th token(type:21) on line 11 : end
+ 11-th token(type:23) on line 12 : if
+ 12-th token(type:24) on line 13 : then
+ 13-th token(type:25) on line 14 : else
+ 14-th token(type:26) on line 15 : while
+ 15-th token(type:27) on line 16 : do

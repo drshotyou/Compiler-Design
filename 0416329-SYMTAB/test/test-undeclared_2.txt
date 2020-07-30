@@ -1,0 +1,36 @@
+call yyparse
+PROGRAM
+VARDECLR
+   a
+   b
+   TYPE_INT
+VARDECLR
+  c
+  TYPE_REAL
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ procedure:xxx
+COMPOUND_STMT
+STMT_LIST
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  3
+ ASSIGNMENT
+  LHS b
+  a
+  4
+  d
+ xxx
+ ooo
+ xxx
+********************************
+*       No syntax error!       *
+********************************
+line:11 Error: undeclared variable1 d
+Segmentation fault (core dumped)

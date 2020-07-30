@@ -1,0 +1,16 @@
+Scanner Project 評分標準
+總共20分
+
+- Reserved Word             1分
+- Operator                  1分
+- Identifier                2分
+- Integer                   2分
+- Float                     2分
+- Scientific Notation       3分
+- String                    3分
+- Comments                  3分
+- Error handling            2分
+- Output                    1分
+
+每個測試的項目依據實做完整度以及通過測資的數量來決定
+沒有上傳程式到E3平台，沒有在規定時間來demo者以0分計

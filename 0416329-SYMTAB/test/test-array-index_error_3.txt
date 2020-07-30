@@ -1,0 +1,82 @@
+call yyparse
+PROGRAM
+VARDECLR
+     a
+     b
+     TYPE_INT
+VARDECLR
+    rr
+    TYPE_REAL
+VARDECLR
+   c
+   TYPE_ARRAY
+   0
+   1
+   TYPE_ARRAY
+   2
+   3
+   TYPE_ARRAY
+   4
+   5
+   TYPE_INT
+VARDECLR
+  d
+  TYPE_ARRAY
+  3
+  4
+  TYPE_ARRAY
+  5
+  6
+  TYPE_REAL
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS rr
+  3.140000
+ ASSIGNMENT
+  LHS c
+  1
+  3
+  5
+  8
+ ASSIGNMENT
+  LHS c
+  8
+  3
+  4
+  10
+ ASSIGNMENT
+  LHS c
+  1
+  5
+  6
+  3
+  4
+  *
+   5
+   0
+  9
+ ASSIGNMENT
+  LHS d
+  3
+  rr
+  8.330000
+********************************
+*       No syntax error!       *
+********************************
+line:10 Error: Array index out of bound
+line:10 Error: type mismatch for assignment
+------------------------------------------------------------------------------
+Name:d          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (5,6)
+------------------------------------------------------------------------------
+Name:c          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (4,5)
+------------------------------------------------------------------------------
+Name:rr         |Scope:0 |Type:real       |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 

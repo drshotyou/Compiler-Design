@@ -1,0 +1,100 @@
+call yyparse
+PROGRAM
+VARDECLR
+    a
+    b
+    c
+    TYPE_INT
+VARDECLR
+   d
+   e
+   TYPE_REAL
+VARDECLR
+  f
+  TYPE_STRING
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ func1
+ TYPE_INT
+VARDECLR
+    a
+    TYPE_INT
+VARDECLR
+   d
+   TYPE_REAL
+VARDECLR
+  f
+  TYPE_STRING
+COMPOUND_STMT
+STMT_LIST
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ procedure:proc1
+PARA_LIST
+PARA
+ g
+ TYPE_ARRAY
+ 1
+ 10
+ TYPE_INT
+VARDECLR
+    a
+    TYPE_INT
+VARDECLR
+   d
+   TYPE_REAL
+VARDECLR
+  f
+  TYPE_STRING
+COMPOUND_STMT
+STMT_LIST
+COMPOUND_STMT
+STMT_LIST
+********************************
+*       No syntax error!       *
+********************************
+------------------------------------------------------------------------------
+Name:f		|Scope:0 |Type:string     |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:e		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:func1		|Scope:0 |Type:Function    |Return: int |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:proc1		|Scope:0 |Type:Procedure   |Return:     |Parameter: (g)		|Dim:     |Array Range: 
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:f		|Scope:1 |Type:string     |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d		|Scope:1 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:g		|Scope:2 |Type:Array        |Return:     |Parameter: ()		|Dim:1    |Array Range: (1,10)
+------------------------------------------------------------------------------
+Name:f		|Scope:2 |Type:string     |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d		|Scope:2 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:2 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************
+********************************
+*      No semantic error!      *
+********************************

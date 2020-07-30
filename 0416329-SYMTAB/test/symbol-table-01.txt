@@ -1,0 +1,34 @@
+call yyparse
+PROGRAM
+VARDECLR
+    a
+    b
+    c
+    TYPE_INT
+VARDECLR
+   d
+   e
+   TYPE_REAL
+VARDECLR
+  f
+  TYPE_STRING
+COMPOUND_STMT
+STMT_LIST
+********************************
+*       No syntax error!       *
+********************************
+------------------------------------------------------------------------------
+Name:f		|Scope:0 |Type:string     |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:e		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*      No semantic error!      *
+********************************

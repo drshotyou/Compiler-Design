@@ -1,0 +1,50 @@
+call yyparse
+PROGRAM
+VARDECLR
+  ij
+  TYPE_INT
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ kl
+PARA_LIST
+PARA
+ mn
+ TYPE_INT
+ TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS op
+  ij
+  mn
+COMPOUND_STMT
+STMT_LIST
+ >
+  ij
+  1
+ ASSIGNMENT
+  LHS op
+  1
+ ASSIGNMENT
+  LHS op
+  2
+********************************
+*       No syntax error!       *
+********************************
+line:8 Error: undeclared variable2 op
+line:14 Error: undeclared variable2 op
+line:14 Error: type mismatch for assignment
+line:15 Error: undeclared variable2 op
+line:15 Error: type mismatch for assignment
+------------------------------------------------------------------------------
+Name:ij		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:kl		|Scope:0 |Type:Function    |Return: int |Parameter: (m)		|Dim:     |Array Range: 
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:mn		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************

@@ -1,0 +1,82 @@
+call yyparse
+PROGRAM
+VARDECLR
+      a
+      b
+      c
+      TYPE_INT
+VARDECLR
+     d
+     e
+     TYPE_ARRAY
+     1
+     10
+     TYPE_INT
+VARDECLR
+    g
+    h
+    TYPE_REAL
+VARDECLR
+   g
+   TYPE_ARRAY
+   23
+   57
+   TYPE_ARRAY
+   23
+   57
+   TYPE_ARRAY
+   23
+   57
+   TYPE_ARRAY
+   23
+   57
+   TYPE_ARRAY
+   23
+   57
+   TYPE_REAL
+VARDECLR
+  k
+  TYPE_ARRAY
+  23
+  57
+  TYPE_ARRAY
+  23
+  57
+  TYPE_REAL
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  a
+  1
+ ASSIGNMENT
+  LHS k
+  25
+  20
+  k
+  25
+  20
+  3.140000
+********************************
+*       No syntax error!       *
+********************************
+line:5 Error: duplicate declaration of variable g
+line:16 Error: Array index out of bound
+line:16 Error: Array index out of bounds
+------------------------------------------------------------------------------
+Name:k          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (23,57)
+------------------------------------------------------------------------------
+Name:g          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (23,57)
+------------------------------------------------------------------------------
+Name:h          |Scope:0 |Type:real       |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (1,10)
+------------------------------------------------------------------------------
+Name:e          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (1,10)
+------------------------------------------------------------------------------
+Name:a          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 

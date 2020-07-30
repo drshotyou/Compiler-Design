@@ -1,0 +1,4 @@
+syntax error: at line 19 symbol'a'
+
+Same as with semantics-test02-errors.p
+Required grammar changes, changes resulted in shift/reduce conflicts. 

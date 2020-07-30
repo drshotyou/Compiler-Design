@@ -1,0 +1,15 @@
+  0-th token(type:41) on line 1 : // This is C++ Style Comments
+  1-th token(type:40) on line 2 : /* This is C Style Comment */
+  2-th token(type:41) on line 3 : // NotId 12345 123.456E+55 "Hello World"
+  3-th token(type:41) on line 4 : // Nested comments // Innermost Comment
+  4-th token(type:41) on line 5 : // Nested Outer comment /* Nested Inner C++ Style Comment // */ Nested Outer comment in the last
+  5-th token(type:40) on line 6 : /* Hello World | // <- You should not scan this one as C Style Comment | C++ Style Comment ends -> */
+  6-th token(type:40) on line 13 : /*  
+    NotId
+    12345
+    123.456E+55
+    "Hello World"
+    // Nested C Style comments
+    /* Nested C++ Style Comments */
+  7-th token(type:36) on line 14 : *
+  8-th token(type:37) on line 14 : /

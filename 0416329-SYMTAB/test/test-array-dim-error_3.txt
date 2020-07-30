@@ -1,0 +1,68 @@
+call yyparse
+PROGRAM
+VARDECLR
+   a
+   b
+   TYPE_INT
+VARDECLR
+  c
+  TYPE_ARRAY
+  0
+  1
+  TYPE_ARRAY
+  2
+  3
+  TYPE_ARRAY
+  4
+  5
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  1
+ ASSIGNMENT
+  LHS c
+  1
+  3
+  5
+  8
+ ASSIGNMENT
+  LHS c
+  a
+  a
+  2
+  a
+  4
+  a
+  6
+  10
+ ASSIGNMENT
+  LHS c
+  1
+  3
+  5
+  0
+  77
+  5566
+ ASSIGNMENT
+  LHS c
+  0
+  8
+********************************
+*       No syntax error!       *
+********************************
+line:9 Error: Array(c) dim out of bound
+line:9 Error: type mismatch for assignment
+line:10 Error: Array(c) dim out of bound
+line:10 Error: type mismatch for assignment
+------------------------------------------------------------------------------
+Name:c          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (4,5)
+------------------------------------------------------------------------------
+Name:a          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 

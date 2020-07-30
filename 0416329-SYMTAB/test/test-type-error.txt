@@ -1,0 +1,27 @@
+call yyparse
+PROGRAM
+VARDECLR
+  aa
+  bb
+  cc
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS aa
+  0.500000
+  *
+   0.800000
+   2.000000
+********************************
+*       No syntax error!       *
+********************************
+------------------------------------------------------------------------------
+Name:aa		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:bb		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:cc		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*      No semantic error!      *
+********************************

@@ -1,0 +1,7 @@
+  0-th token(type:2) on line 1 : ThisIsAVariable
+  1-th token(type:2) on line 2 : aa12345
+  2-th token(type:2) on line 3 : __Underscores_HEADING
+  3-th token(type:2) on line 4 : Complex_123ABC__AA_1_
+  4-th token(type:2) on line 5 : A_VERY_long_Identifier_1234567890987654321_CAN_YOU_IDENTIFIER_AND_TOKENIZE_IT_WITH_QUESTION_SIGN_IN_THE_LAST
+  5-th token(type:13) on line 6 : 12345
+  6-th token(type:2) on line 6 : WRONG_Identifier

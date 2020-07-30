@@ -1,0 +1,25 @@
+call yyparse
+PROGRAM
+VARDECLR
+  aa
+  bb
+  cc
+  aa
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  bb
+  cc
+********************************
+*       No syntax error!       *
+********************************
+line:2 Error: duplicate declaration of variable aa
+line:4 Error: undeclared variable2 a
+------------------------------------------------------------------------------
+Name:aa		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:bb		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:cc		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 

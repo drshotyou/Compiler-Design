@@ -1,0 +1,88 @@
+call yyparse
+PROGRAM
+VARDECLR
+   a
+   b
+   TYPE_INT
+VARDECLR
+  c
+  TYPE_REAL
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ tt
+ TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS tt
+  3
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ bb
+PARA_LIST
+PARA
+ a
+ b
+ TYPE_REAL
+ TYPE_INT
+VARDECLR
+   c
+   TYPE_INT
+VARDECLR
+  d
+  TYPE_ARRAY
+  1
+  2
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS bb
+  tt
+  3
+ ASSIGNMENT
+  LHS tt
+  a
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  3
+********************************
+*       No syntax error!       *
+********************************
+line:7 Error: LHS is a function or procedure!
+line:14 Error: LHS is a function or procedure!
+line:15 Error: LHS is a function or procedure!
+line:15 Error: type mismatch for assignment
+------------------------------------------------------------------------------
+Name:c		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:tt		|Scope:0 |Type:Function    |Return: int |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:bb		|Scope:0 |Type:Function    |Return: int |Parameter: (a)		|Dim:     |Array Range: 
+********************************
+*       Open    Scope !       *
+********************************
+********************************
+*       Close    Scope !       *
+********************************
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:a		|Scope:2 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:2 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d		|Scope:2 |Type:Array        |Return:     |Parameter: ()		|Dim:|Array Range: (1,2)
+------------------------------------------------------------------------------
+Name:c		|Scope:2 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************

@@ -1,0 +1,208 @@
+call yyparse
+PROGRAM
+VARDECLR
+     a
+     b
+     c
+     TYPE_INT
+VARDECLR
+    d
+    e
+    TYPE_ARRAY
+    1
+    10
+    TYPE_INT
+VARDECLR
+   g
+   h
+   TYPE_REAL
+VARDECLR
+  k
+  TYPE_ARRAY
+  23
+  57
+  TYPE_ARRAY
+  23
+  57
+  TYPE_REAL
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ procedure:sort
+PARA_LIST
+PARA
+ a
+ TYPE_ARRAY
+ 1
+ 10
+ TYPE_INT
+VARDECLR
+  a
+  b
+  c
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS e
+  a
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ addition
+PARA_LIST
+PARA
+ a
+ b
+ TYPE_INT
+ TYPE_INT
+VARDECLR
+  c
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS addition
+  a
+  b
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  1
+ <
+  a
+  10
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS sum
+  sum
+  a
+ ASSIGNMENT
+  LHS a
+  a
+  1
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS b
+  1
+ <
+  b
+  11
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS d
+  b
+  b
+  *
+   b
+   b
+   1
+ ASSIGNMENT
+  LHS b
+  b
+  1
+ sort
+ d
+ ASSIGNMENT
+  LHS k
+  25
+  26
+  3
+ ASSIGNMENT
+  LHS k
+  25
+  26
+  3.140000
+ ASSIGNMENT
+  LHS k
+  25
+  26
+  k
+  25
+  26
+  3
+ ASSIGNMENT
+  LHS k
+  25
+  126
+  3.140000
+ ASSIGNMENT
+  LHS k
+  125
+  26
+  3.140000
+ ASSIGNMENT
+  LHS k
+  125
+  126
+  3.140000
+********************************
+*       No syntax error!       *
+********************************
+line:10 Error: duplicate declaration of variable a
+line:19 Error: LHS is a function or procedure!
+line:26 Error: undeclared variable2 sum
+line:26 Error: undeclared variable1 sum
+line:36 Error:Too many Arguments
+line:38 Error: type mismatch for assignment
+line:41 Error: Array index out of bound
+line:42 Error: Array index out of bound
+line:43 Error: Array index out of bound
+------------------------------------------------------------------------------
+Name:k          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (23,57)
+------------------------------------------------------------------------------
+Name:g          |Scope:0 |Type:real       |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:h          |Scope:0 |Type:real       |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (1,10)
+------------------------------------------------------------------------------
+Name:e          |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (1,10)
+------------------------------------------------------------------------------
+Name:a          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c          |Scope:0 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:sort               |Scope:0 |Type:Procedure   |Return:     |Parameter: (a)         |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:addition           |Scope:0 |Type:Function    |Return: int |Parameter: (a)         |Dim:     |Array Range: 
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:a          |Scope:1 |Type:Array        |Return:     |Parameter: ()         |Dim:1    |Array Range: (1,10)
+------------------------------------------------------------------------------
+Name:b          |Scope:1 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c          |Scope:1 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:a          |Scope:2 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b          |Scope:2 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c          |Scope:2 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************

@@ -1,0 +1,16 @@
+program
+var
+array
+not
+of
+integer
+real
+function
+procedure
+begin
+end
+if
+then
+else
+while
+do

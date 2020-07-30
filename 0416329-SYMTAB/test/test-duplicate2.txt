@@ -1,0 +1,49 @@
+call yyparse
+PROGRAM
+VARDECLR
+   abc
+   TYPE_INT
+VARDECLR
+  abc
+  TYPE_ARRAY
+  23
+  57
+  TYPE_ARRAY
+  23
+  57
+  TYPE_REAL
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ abc
+PARA_LIST
+PARA
+ x
+ TYPE_INT
+ TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS x
+  x
+  1
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS abc
+  1
+********************************
+*       No syntax error!       *
+********************************
+line:3 Error: duplicate declaration of variable abc
+line:7 Error: duplicate declaration of variable abc
+line:11 Error: type mismatch for assignment
+------------------------------------------------------------------------------
+Name:abc                |Scope:0 |Type:Array        |Return:     |Parameter: ()         |Dim:|Array Range: (23,57)
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:x          |Scope:1 |Type:integer    |Return:     |Parameter: ()           |Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************

@@ -1,0 +1,82 @@
+call yyparse
+PROGRAM
+VARDECLR
+   a
+   b
+   TYPE_INT
+VARDECLR
+  c
+  TYPE_REAL
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ bb
+PARA_LIST
+PARA
+ a
+ b
+ TYPE_INT
+ TYPE_INT
+VARDECLR
+   c
+   TYPE_INT
+VARDECLR
+  d
+  TYPE_ARRAY
+  1
+  2
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  1
+ ASSIGNMENT
+  LHS c
+  0.500000
+ ASSIGNMENT
+  LHS d
+  1
+  a
+ ASSIGNMENT
+  LHS b
+  c
+  d
+ ASSIGNMENT
+  LHS bb
+  5
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  3
+********************************
+*       No syntax error!       *
+********************************
+line:10 Error: type mismatch for assignment
+line:13 Error: LHS is a function or procedure!
+------------------------------------------------------------------------------
+Name:c		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:bb		|Scope:0 |Type:Function    |Return: int |Parameter: (a)		|Dim:     |Array Range: 
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:a		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:d		|Scope:1 |Type:Array        |Return:     |Parameter: ()		|Dim:|Array Range: (1,2)
+------------------------------------------------------------------------------
+Name:c		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************

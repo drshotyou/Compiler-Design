@@ -1,0 +1,81 @@
+call yyparse
+PROGRAM
+VARDECLR
+   a
+   b
+   TYPE_INT
+VARDECLR
+  c
+  TYPE_REAL
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ procedure:ss
+PARA_LIST
+PARA
+ a
+ b
+ TYPE_INT
+PARA_LIST
+PARA
+ c
+ TYPE_REAL
+COMPOUND_STMT
+STMT_LIST
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ tt
+ TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS tt
+  3
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  3
+  tt
+ ss
+ a
+ tt
+ 0.500000
+ ss
+ tt
+ tt
+********************************
+*       No syntax error!       *
+********************************
+line:11 Error: LHS is a function or procedure!
+line:16 Error:Wrong argument 
+line:17 Error:Wrong argument 
+------------------------------------------------------------------------------
+Name:c		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:ss		|Scope:0 |Type:Procedure   |Return:     |Parameter: (a,b,)		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:tt		|Scope:0 |Type:Function    |Return: int |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:a		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c		|Scope:1 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************
+********************************
+*       Open    Scope !       *
+********************************
+********************************
+*       Close    Scope !       *
+********************************

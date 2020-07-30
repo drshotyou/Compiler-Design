@@ -1,0 +1,41 @@
+call yyparse
+PROGRAM
+VARDECLR
+   a
+   c
+   TYPE_INT
+VARDECLR
+  b
+  TYPE_REAL
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  -
+   3
+  4
+ ASSIGNMENT
+  LHS c
+  -
+   -
+    -
+     5
+ ASSIGNMENT
+  LHS b
+  -
+   5.000000
+  6.000000
+********************************
+*       No syntax error!       *
+********************************
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:real       |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*      No semantic error!      *
+********************************

@@ -1,0 +1,25 @@
+call yyparse
+PROGRAM
+VARDECLR
+  a
+  b
+  c
+  TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ ASSIGNMENT
+  LHS d
+  *
+   a
+   15
+********************************
+*       No syntax error!       *
+********************************
+line:7 Error: undeclared variable2 d
+line:7 Error: type mismatch for assignment
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:c		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 

@@ -1,0 +1,3 @@
+syntax error: at line 19 symbol'a'
+
+According to grammar this file shouldn't parse, i tried changing it but it resulted in 30 shift/reduce conflicts.

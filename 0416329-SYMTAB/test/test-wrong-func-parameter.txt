@@ -1,0 +1,78 @@
+call yyparse
+PROGRAM
+VARDECLR
+  a
+  b
+  TYPE_INT
+ SUBPROG_DECL
+ SUBPROG_HEAD
+ sum
+PARA_LIST
+PARA
+ a
+ b
+ TYPE_INT
+ TYPE_INT
+COMPOUND_STMT
+STMT_LIST
+ <=
+  a
+  0
+ ASSIGNMENT
+  LHS sum
+  0
+ ASSIGNMENT
+  LHS sum
+  a
+  sum
+  a
+  1
+  0
+COMPOUND_STMT
+STMT_LIST
+STMT_LIST
+STMT_LIST
+ ASSIGNMENT
+  LHS a
+  sum
+  10
+ ASSIGNMENT
+  LHS a
+  sum
+  10
+  20
+ ASSIGNMENT
+  LHS b
+  sum
+  -
+   10
+   4
+   7
+********************************
+*       No syntax error!       *
+********************************
+line:8 Error: LHS is a function or procedure!
+line:9 Error: LHS is a function or procedure!
+line:9 Error:Wrong argument 
+line:14 Error:Wrong argument number
+line:14 Error: type mismatch for assignment
+line:15 Error:Wrong argument number
+line:15 Error: type mismatch for assignment
+line:16 Error:Wrong argument number
+line:16 Error: type mismatch for assignment
+------------------------------------------------------------------------------
+Name:a		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:0 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:sum		|Scope:0 |Type:Function    |Return: int |Parameter: (a)		|Dim:     |Array Range: 
+********************************
+*       Open    Scope !       *
+********************************
+------------------------------------------------------------------------------
+Name:a		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+------------------------------------------------------------------------------
+Name:b		|Scope:1 |Type:integer    |Return:     |Parameter: ()		|Dim:     |Array Range: 
+********************************
+*       Close    Scope !       *
+********************************

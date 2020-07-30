@@ -1,0 +1,19 @@
+  0-th token(type:14) on line 1 : ""
+  1-th token(type:14) on line 2 : "Single String"
+  2-th token(type:14) on line 3 : "Double"
+  3-th token(type:14) on line 3 : "Strings"
+  4-th token(type:14) on line 4 : "double quote->"
+  5-th token(type:14) on line 4 : "double quote->""<-double quote"
+  6-th token(type:14) on line 5 : "Your string should ignore these reserved words -> program var array not"
+  7-th token(type:14) on line 6 : " Test whether you can ignore comments // This is a comment "
+  8-th token(type:14) on line 7 : " Test whether you can ignore comments /* This is a comment */ "
+  9-th token(type:14) on line 8 : " Test whether you can ignore comments // This is a comment /* This is a comment */ "
+Lexical analyzer error at line 10 : " Multi-Line
+  String Can you tokenize it"
+Lexical analyzer error at line 12 : " Multi-Line
+  With comment // This is a comment "
+Lexical analyzer error at line 17 : " Multi-Line
+  With comment 
+  /* 
+    This is a comment
+  */ "
